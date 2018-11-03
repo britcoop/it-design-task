@@ -1,0 +1,190 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+// import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import { Container, Row, Col } from 'reactstrap';
+import lead from './images/lead.png'
+import openQuote from './images/quotes.png'
+
+import './App.css';
+
+// const styles = theme => ({
+
+//   root: {
+//     flexGrow: 1,
+//   },
+//   paper: {
+//     padding: theme.spacing.unit * 2,
+//     textAlign: 'center',
+//     color: theme.palette.text.secondary,
+//   },
+// });
+
+const testimonials = [
+  {
+    name: 'Serge Parisien',
+    title: 'Manager, Enterprise Architecture',
+    content: '“The documentation that supports the program was shared with us during and after the session in the form of heat maps, business capabilities models, and architecture diagrams. These documents were practical and effective in our discussions with stakeholders.”'
+  },
+  {
+    name: 'Dave Roach',
+    title: 'Chief Information Officer',
+    content: '“I accomplished my goals of trying to create the strategic pillars and having a structure that would live on for years to come, as well as getting into the weeds on the things we want to get very specific on for the next three years. With Info-Tech’s help, we accomplished both.”'
+  },
+  {
+    name: 'Mark Hubbard',
+    title: 'Chief Information Officer',
+    content: '“We started seeing results from the Agile workshop almost immediately. This was apparent through more team collaboration, IT and product engagement, and more measurable business value through enhancements delivered to production for our customers in shorter development cycles.”'
+  },
+]
+
+const SimpleCard = () => {
+  return(
+      <div className="container">
+        <div className="row d-flex justify-content-center agent-1 title-row">
+          <div className="col-lg-3">
+            <div className="lead-letter"><img src={lead} className="img-fluid"/></div>
+            <hr className="clear" />
+          </div>
+          <div className="col-lg-6">
+            <div className="title">
+              <h1 className="lead-title">WORKSHOPS</h1>
+              <h5 className="secondary-title">INNOVATIVE CONSULTING</h5>
+              <p className="lead-line m-auto">Your most pressing IT problems solved in one week.</p>
+            </div>
+            {/* <hr className="clear"/> */}
+          </div>
+        </div>
+
+        <div className="row d-flex justify-content-center">
+          <div className="col-lg-9">
+            <h1>What our clients are saying...</h1>
+          </div>
+        </div>
+       
+        {/* <div className="row">
+          {testimonials.map(testimonial => (
+            <div className="col-md-6">
+              <div className="testimonials" key={testimonial.name}>
+              <Typography className={classes.title} color="textSecondary" gutterBottom>
+              {testimonial.content}
+              </Typography>
+              <Typography component="p">
+              {testimonial.name}
+              </Typography>
+              <Typography component="p">
+              {testimonial.title}
+              </Typography>
+              </div>
+            </div>
+          ))}
+        </div> */}
+
+
+
+         <div className="row justify-content-center">
+            <div className="col-lg-3">
+              <div className="card">
+                <div className="top-border grow-left agent-2"/>
+                  <div className="card-body quotes-left agent-3">
+                    <p className="testimonial">
+                      {/* <img className="open-quote align-self-start" src={openQuote}/>  */}
+                      "I&nbsp;accomplished my goals of trying to create the strategic pillars 
+                      and having a structure that would live on for years to come, as well as 
+                      getting into the weeds on the things we want to get very specific on 
+                      for the next three years. With Info-Tech’s help, we accomplished both."
+                    </p>
+                    <p className="author">SERGE PARISIEN<br />
+                    CIO, Kadlec Regional Medical Center</p>
+                  </div>
+                </div>
+              {/* </div> */}
+          </div>
+          <div className="col-lg-6">
+            <div className="card">
+              <div className="top-border grow-left agent-2"/>
+                <div className="card-body quotes-right agent-3">
+                  <div className="right-top">
+                    <p className="testimonial">
+                    {/* <img className="open-quote align-self-start" src={openQuote}/> */}
+                      "The documentation that supports the program was shared with us 
+                      during and after the session in the form of heat maps, business 
+                      capabilities models, and architecture diagrams. These documents were
+                      practical and effective in our discussions with stakeholders."</p>
+                    <p className="author">DAVE ROACH<br />
+                    Manager, cmhc</p>
+                  </div>
+                </div>
+              </div>
+            {/* </div> */}
+            {/* <div className="clear-20"/> */}
+              <div className="card pt-3">
+                <div className="top-border grow-left agent-2"/>
+                  <div className="card-body agent-3">
+                    <p className="testimonial">
+                    {/* <img className="open-quote align-self-start" src={openQuote}/> */}
+                    "We started seeing results from the Agile workshop almost immediately. 
+                    This was apparent through more team collaboration, IT and product 
+                    engagement, and more measurable business value through enhancements 
+                    delivered to production for our customers in shorter development 
+                    cycles."</p>
+                    <p className="author">MARK HUBBARD<br />
+                    CIO, Fundserv Inc.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        // </div>
+
+  ); 
+}
+  
+  // const Test = ({testimonials}) => (
+  //   <div className={classes.root}>
+  //   <Container>
+  //     <Row>
+  //     {testimonials.map(testimonial => (
+  //       <Col xs="12" md="4">
+  //        {/* <Card className={classes.card}>
+  //        <CardContent> */}
+  //         <div className="testimonials" key={testimonial.name}>
+  //         <Typography className={classes.title} color="textSecondary" gutterBottom>
+  //         {testimonial.content}
+  //         </Typography>
+  //         <Typography component="p">
+  //         {testimonial.name}
+  //         </Typography>
+  //         <Typography component="p">
+  //         {testimonial.title}
+  //         </Typography>
+  //         </div>
+  //        {/* </CardContent>
+  //       </Card> */}
+  //       </Col>
+  //     ))}
+  //     </Row>
+  //     </Container>
+  //   </div>
+  // ); 
+
+//   return (
+
+//         <div data-aos="fade-up" data-aos-once="true" data-aos-duration="500">
+//           <Test testimonials={testimonials} />
+//         </div>
+
+//   );
+// }
+
+// SimpleCard.propTypes = {
+//   classes: PropTypes.object.isRequired,
+// };
+
+export default SimpleCard;

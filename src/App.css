@@ -1,0 +1,153 @@
+/* fonts */
+/* @import url('https://fonts.googleapis.com/css?family=Lora:400i|Open+Sans|Ubuntu'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
+
+/* CUSTOM */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+nav a {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+#root nav{
+  background-color:#300032!important;
+}
+#root nav a{
+  color:#e6e6e8!important;
+}
+.navbar {
+  margin-bottom: 2rem;
+  -webkit-box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19), 3px 0 3px 0 rgba(0,0,0,0.19), 0 3px 3px 0 rgba(0,0,0,0.23);
+  box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19), 3px 0 3px 0 rgba(0,0,0,0.19), 0 3px 3px 0 rgba(0,0,0,0.23);
+}
+.title-row {
+  padding: 1.25rem;
+}
+.jumbotron {
+  background-image: url("./images/workshop_1.jpg");
+  background-size: cover;
+}
+.display-4, .lead{
+  font-family: 'Roboto Condensed';
+  color: white!important;
+}
+.header-3, .footer span {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.author {
+  /* font-family: 'Ubuntu', sans-serif; */
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  /* margin-bottom: 0px; */
+}
+.clear {
+  border-top: 1px solid white;
+}
+.card {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border:0!important;
+}
+.card-body {
+  background-color: #f8f9fa;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: .3rem;
+}
+.top-border {
+  border-top: 5px solid #0a1a22;
+}
+.open-quote {
+  width:40px;
+  height:auto;
+}
+.testimonial img{
+  vertical-align:bottom!important;
+  margin-right:10px;
+}
+.testimonial {
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+/* ANIMATION */
+
+@keyframes fade-in-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes grow-left {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+}
+
+.fade-in-bottom {
+    opacity: 0;
+    animation: fade-in-bottom ease 0.4s forwards;
+    animation-delay: 0.2s;
+}
+
+.grow-left {
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.agent-1, .agent-3 {
+  opacity: 0;
+  animation: fade-in-right ease 0.4s forwards;
+}
+
+.agent-2 {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+.agent-3 {
+  animation-delay: 0.8s;
+}
+
+/* AOS */
+/* animation */
+[aos="fade-left"] {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+[aos="fade-left"].aos-animate {
+  opacity: 1;
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
